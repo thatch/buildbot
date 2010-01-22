@@ -70,7 +70,8 @@ class StatusResourceBuilder(HtmlResource, BuildLineMixin):
             if pb.source.changes:
                 for c in pb.source.changes:
                     changes.append({ 'url' : path_to_change(req, c),
-                                            'who' : c.who})
+                                     'who' : c.who})
+                reason = "see changes"
             elif pb.source.revision:
                 reason = pb.source.revision
             else:
